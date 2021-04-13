@@ -9,6 +9,7 @@ defmodule NervesHubCaStore.MixProject do
       app: :nerves_hub_ca_store,
       version: @version,
       description: description(),
+      dialyzer: dialyzer(),
       docs: docs(),
       package: package(),
       elixir: "~> 1.11",
@@ -22,7 +23,6 @@ defmodule NervesHubCaStore.MixProject do
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
   def application do
     [
       extra_applications: [:logger]
@@ -31,6 +31,12 @@ defmodule NervesHubCaStore.MixProject do
 
   defp description do
     "The NervesHub CA store"
+  end
+
+  defp dialyzer() do
+    [
+      flags: [:race_conditions, :unmatched_returns, :error_handling, :underspecs]
+    ]
   end
 
   defp docs do
