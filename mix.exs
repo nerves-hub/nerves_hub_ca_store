@@ -13,7 +13,12 @@ defmodule NervesHubCaStore.MixProject do
       package: package(),
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      preferred_cli_env: [
+        docs: :docs,
+        "hex.build": :docs,
+        "hex.publish": :docs
+      ]
     ]
   end
 
@@ -56,6 +61,7 @@ defmodule NervesHubCaStore.MixProject do
   defp deps do
     [
       {:x509, "~> 0.5"},
+      {:dialyxir, "~> 1.1", only: :dev},
       {:ex_doc, "~> 0.24", only: :docs}
     ]
   end

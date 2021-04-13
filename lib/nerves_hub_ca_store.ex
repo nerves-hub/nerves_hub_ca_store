@@ -24,7 +24,7 @@ defmodule NervesHubCaStore do
   @doc """
   CA Store as list of OTP compatible certificate records
   """
-  @spec certificates(env) :: [X509.Certificate.t()]
+  @spec certificates(env) :: [tuple()]
   def certificates(env \\ :prod) do
     file_path(env)
     |> File.read!()
