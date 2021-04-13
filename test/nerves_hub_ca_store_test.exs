@@ -1,6 +1,6 @@
-defmodule NervesHubCaStoreTest do
+defmodule NervesHubCAStoreTest do
   use ExUnit.Case
-  doctest NervesHubCaStore
+  doctest NervesHubCAStore
 
   test "production certificate store" do
     check_path(:prod)
@@ -15,23 +15,23 @@ defmodule NervesHubCaStoreTest do
   end
 
   test "alias ca_certs" do
-    der_certs = NervesHubCaStore.ca_certs()
+    der_certs = NervesHubCAStore.ca_certs()
     assert is_list(der_certs)
   end
 
   defp check_bundled(env) do
-    der_certs = NervesHubCaStore.cacerts(env)
+    der_certs = NervesHubCAStore.cacerts(env)
     assert is_list(der_certs)
     assert length(der_certs) == 3
     assert Enum.all?(der_certs, &is_binary/1)
   end
 
   defp check_path(env) do
-    assert File.exists?(NervesHubCaStore.file_path(env))
+    assert File.exists?(NervesHubCAStore.file_path(env))
   end
 
   defp check_certificates(env) do
-    otp_certs = NervesHubCaStore.certificates(env)
+    otp_certs = NervesHubCAStore.certificates(env)
     assert is_list(otp_certs)
     assert length(otp_certs) == 3
     assert Enum.all?(otp_certs, &is_tuple/1)

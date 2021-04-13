@@ -1,4 +1,4 @@
-defmodule NervesHubCaStore do
+defmodule NervesHubCAStore do
   @moduledoc """
   Certificate Authority Store for the production NervesHub instance
 
@@ -16,7 +16,7 @@ defmodule NervesHubCaStore do
   end
 
   @doc """
-  Alias for NervesHubCaStore.cacerts/1
+  Alias for NervesHubCAStore.cacerts/1
   """
   @spec ca_certs(env) :: [:public_key.der_encoded()]
   def ca_certs(env \\ :prod), do: cacerts(env)

@@ -1,4 +1,4 @@
-defmodule NervesHubCaStore.MixProject do
+defmodule NervesHubCAStore.MixProject do
   use Mix.Project
 
   @version "0.1.0"
