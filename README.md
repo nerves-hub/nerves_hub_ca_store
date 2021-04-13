@@ -1,4 +1,4 @@
-# NervesHubCaStore
+# NervesHubCAStore
 
 This package contains the Certificate Authority certs for the official
 public NervesHub instance. It should be used by any package that requires
@@ -28,9 +28,9 @@ instances:
 
 | | |
 | --- | --- |
-| `NervesHubCaStore.file_path/0` | path to generated `cacerts.pem` |
-| `NervesHubCaStore.certificates/0` | Reads the `cacerts.pem` in as a list of OTP certificates |
-| `NervesHubCaStore.cacerts/0` | Reads the `cacerts.pem` in as a list of DER encoded certificates |
+| `NervesHubCAStore.file_path/0` | path to generated `cacerts.pem` |
+| `NervesHubCAStore.certificates/0` | Reads the `cacerts.pem` in as a list of OTP certificates |
+| `NervesHubCAStore.cacerts/0` | Reads the `cacerts.pem` in as a list of DER encoded certificates |
 
 **Note**: Each function can also be supplied with the `:prod` or `:staging` env
 to dictate which set of certificates to read in and defaults to `:prod`. It is
