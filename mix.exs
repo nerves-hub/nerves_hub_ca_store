@@ -55,7 +55,8 @@ defmodule NervesHubCaStore.MixProject do
 
   defp deps do
     [
-      {:x509, "~> 0.5"}
+      {:x509, "~> 0.5"},
+      {:ex_doc, "~> 0.24", only: :docs}
     ]
   end
 end
