@@ -3,6 +3,12 @@
 [![Hex version](https://img.shields.io/hexpm/v/nerves_hub_ca_store.svg "Hex version")](https://hex.pm/packages/nerves_hub_ca_store)
 [![CircleCI](https://circleci.com/gh/nerves-hub/nerves_hub_ca_store.svg?style=svg)](https://circleci.com/gh/nerves-hub/nerves_hub_ca_store)
 
+**Important**
+
+With the public NervesHub instance offline, this package is no longer needed and is archived.
+
+---
+
 This package contains the Certificate Authority certs for the official
 public NervesHub instance. It should be used by any package that requires
 these certs including:
